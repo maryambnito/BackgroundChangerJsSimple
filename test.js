@@ -1,10 +1,13 @@
-const text="Benito is the best dog    "
-let index=0;
-function writeText(){
-   document.body.innerText=text.slice(0,index)
-   index++;
-   if(index>text.length-1){
-      index=0
+// window.onload=function(){
+//    const btn=document.getElementById('btn');
+//    btn.addEventListener('click',function(){
+//       document.body.style.background=randomBg();
+
+//    })
+setInterval(randomBg, 1000);
+   function randomBg(){
+      // return `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}
+      // ,${Math.floor(Math.random()*255)} )`
+      // return `hsl(${Math.floor(Math.random()*360)},100%,50%)`
+      document.body.style.background=`hsl(${Math.floor(Math.random()*360)},100%,50%)`
    }
-}
-setInterval(writeText,100);
